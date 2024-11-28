@@ -1,0 +1,291 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 August 2024) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.1cm,bottom=1.4cm,columnsep=0.5cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{ctex}
+
+\usepackage{xcolor}
+\usepackage{longfbox}
+\usepackage{tcolorbox}
+\usepackage{ulem}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+%\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightGrey}{HTML}{444444}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+%\name{周飞虎$~~$（2025届$~$计算机专业）}
+\name{周飞虎$~~$（计算机科学与技术）}
+%\tagline{意向岗位: $~$ISP/Camera/Display/影像/画质等$~$图像相关岗位}
+%\tagline{意向岗位: \uline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$~~~$意向城市: \uline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}
+\tagline{意向岗位: \uline{~~ISP算法工程师~~}$~~~~$意向城市: \uline{~珠海、成都、武汉~}}
+%\tagline{意向岗位: \uline{~~~~算法研究和应用~~~~}$~~~~$意向城市: \uline{~~~~成都、深圳~~~}}
+
+%\tagline{意向岗位: \uline{~~~~~科研及专业技术岗~~~~~}$~~~~$意向城市: \uline{~~四川·成都~~}}
+
+%% You can add multiple photos on the left or right
+\photoR{3.0cm}{me02}
+%\photoL{2.5cm}{me02}
+%\photo[rectangle,edge,right]{me02}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  % \email{flyhu2@126.com}
+  \faIcon{envelope}{ $~$flyhu2@126.com$~~~$}
+  \faIcon{phone-square-alt}{ $~$17683724669$~~~$}
+  % \phone{17683724669}
+  \faIcon{map-marker-alt}{ $~$湖北·荆州$~~~$}
+  % \location{湖北省·荆州市$~~~~~~~~~~~~~$ 1998年01月}
+  \faBirthdayCake{ $~$1998.01$~~~$}
+  \faAddressCard{$~$中共党员}
+%   \github{} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.63}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.142, 14, 13
+\begin{paracol}{2}
+\vspace{-1.2mm}
+\cvsection{教育经历\hfill{\fontsize{12}{11}\selectfont 2016.09 -- 2025.06}}
+\cvevent{广西大学 \tcbox[on line, rounded corners, colback=teal!30!white, colframe={rgb:red,25;green,255;blue,105}, boxrule=0pt, arc=3pt, left=1pt, right=1pt, top=0pt, bottom=0pt]{\fontsize{10}{11}\selectfont 211} | 硕士：计算机科学与技术 | {\hfill 2022 -- 2025}}{}{}{}
+
+\begin{itemize}
+	\item {绩点与排名}: {\color{red}{4.25}}/5.0 $~$ | $~$ {\color{red}{11}}/64 $~$ | $~$ {\color{red}{17}\%}
+	\item 研究方向: 暗光图像增强({\textbf{LLIE}})，超分辨率({\textbf{SR}})，{\textbf{AI-ISP}}，计算摄影等
+	\item 主修课程: 计算机数学 | 数字图像处理与计算机视觉 | 高级人工智能等
+\end{itemize}
+
+\divider
+
+\cvevent{海南大学 \tcbox[on line, rounded corners, colback=teal!30!white, colframe={rgb:red,25;green,255;blue,105}, boxrule=0pt, arc=3pt, left=1pt, right=1pt, top=0pt, bottom=0pt]{\fontsize{10}{11}\selectfont 211} | 学士：通信工程 | {\hfill 2016 -- 2020}}{}{}{}
+\begin{itemize}
+	\item 绩点与排名: {\color{red}{3.79}}/4.0 $~$ | $~$  {\color{red}{7}}/111 $~$ | $~$ {\color{red}{6.3}\%}
+	\item 英语及其它: 大学英语六级 ({\color{red}CET-6})，普通话二级乙等，C1驾照等
+	\item 主修课程: 通信原理 | 信号与系统 | 数字信号处理 | MATLAB及应用等  \\ 
+\end{itemize}
+
+\cvsection{项目经历\hfill {\fontsize{12}{11}\selectfont 2022.09 -- 2025.06}}
+
+%\cvevent{京东方科技集团股份有限公司\hfill (BOE，面板行业龙头企业)}{PE \& 不良机理研究部 / 研究员\hfill 北京·大兴}{}{}
+%\begin{itemize}
+%	\item 负责对显示模组的不良现象进行详细分析，并反馈给设计和工艺部门以改进，
+%	如：亮暗点、线不良，绑定不良，Flicker不良等。
+%	\item 负责LCD/OLED模组的光学/电学性指标能测试，如亮度均匀性、
+%	对比度、色域容积、TFT响应曲线，灰阶响应时间，高低温信耐性等。
+%\end{itemize}
+\cvevent{低光照条件下的联合图像增强与目标检测方法研究\footnote{《项目地址：https://github.com/flyhu2/DarkSR》}}{国家自然科学基金 / 科研骨干}{}{}
+\begin{itemize}
+	\item \textbf{项目描述}：增强低光照条件下的图像质量以及提高目标检的测精度。
+	\item \textbf{工作职责}：（1）负责Low-Level的任务：低照度下的图像复原/增强；
+	$~~~~~$（2）理解RAW图像处理（即ISP Pipline），并用深度学习实现AI-ISP。
+	\item \textbf{项目成果}：（1）一篇软著登记（排名第一，授权时间：2024.02）
+	%$~~~~~$（2）一篇软著：《基于光照融合的暗光图像增强算法软件》（排名第一）
+	$~~~~~$（2）\textbf{一篇{\color{red}{~CCF-C~}}国际会议论文\footnote{《Joint Image Super-resolution and Low-light Enhancement in the Dark》第一作者}({\color{red}{ACCV 2024}} 亚洲计算机视觉顶会)}
+	\item \textbf{论文贡献}：（1）提出了用于夜间图像超分辨率的数据集：DarkSR；
+	$~~~~~$（2）提出了一个基于RAW和sRGB图像双输入的网络结构：JSLNet；
+	$~~~~~$（3）在JSLNet中使用小波变换在频域完成特征融合并实现增强任务；
+	$~~~~~$（4）大量实验证明了提出的JSLNet在主客观评价上优于SOTA方法，\\
+  并且在真实场景中具有更好的泛化性能（使用数据集之外数据推理）。
+\end{itemize}
+
+
+\cvsection{工作经历\hfill {\fontsize{12}{11}\selectfont 2020.07 -- 2021.08}}
+%\cvevent{京东方科技集团股份有限公司\hfill{\fontsize{10}{11}\selectfont {\textbf{\color{PastelRed}PE \& 不良机理研究部 / 研究员}}  }}{}{}{}
+\cvevent{京东方科技集团股份有限公司（北京·大兴）}{中央研究院 / PE \& 不良机理研究部 / 研究员}{}{}
+
+\begin{itemize}
+	\item 负责对显示模组的不良现象进行详细分析，并反馈给设计和\\
+  工艺部门以改进，如：亮暗点、线不良，绑定不良，Flicker不良等。
+	\item 负责LCD/OLED模组的光学/电学性指标能测试，如亮度均匀性、\\
+	对比度、色域容积、TFT响应曲线，灰阶响应时间，高低温信耐性等。
+\end{itemize}
+
+\medskip
+
+
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+
+\switchcolumn
+
+
+\vspace{-0.0mm}
+\cvsection{奖励荣誉}
+
+\begin{itemize}
+	\item {\fontsize{9}{11} \selectfont 广西大学“2024年度优秀学生干部”}
+	\item {\fontsize{9}{11} \selectfont 广西大学“2023年度优秀共青团员”}
+	\item {\fontsize{9}{11} \selectfont 广西大学“2024年研究生二等学业奖学金”}
+	\item {\fontsize{9}{11} \selectfont 广西大学“2023年研究生一等学业奖学金”}
+	\item {\fontsize{9}{11} \selectfont 广西大学“2022年研究生二等学业奖学金”}
+\end{itemize}
+\divider
+\begin{itemize}
+	\item {\fontsize{9}{11} \selectfont 海南大学“2020届优秀毕业生”}
+	\item {\fontsize{9}{11} \selectfont 海南大学“三好学生” × 2次}
+	\item {\fontsize{9}{11} \selectfont 国家励志奖学金 × 2次}
+	\item {\fontsize{9}{11} \selectfont 海南大学“优秀共青团团干部”}
+	\item {\fontsize{9}{11} \selectfont 海南大学“最具创新精神和实践能力大学生”}
+	\item {\fontsize{9}{11} \selectfont 全国大学生电子设计大赛海南赛区：一等奖}
+	\item {\fontsize{9}{11} \selectfont 海南省大学生电子设计大赛本科组：三等奖}
+\end{itemize}
+
+\cvsection{校园经历}
+
+\cvtag{班长 \& 团支书 }
+\cvtag{校级学生组织干事}\\
+\cvtag{学习委员}
+\cvtag{计电学院党建宣传部部长}
+
+
+
+\cvsection{技能评价}
+%\divider\smallskip
+
+
+%\cvtag{责任心}\cvtag{团队合作精神}\\
+\cvtag{扎实的英语读写能力，熟练阅读英文文献}\\
+%\cvtag{掌握Python语言，Pytorch深度学习框架}\\
+%\cvtag{具有半导体行业工作经历，熟悉CMOS电路}\\%
+\cvtag{具有半导体行业工作经历，熟悉显示原理}\\
+\cvtag{掌握图像增强以及复原的基本原理和算法}\\
+%\cvtag{个人学历记录博客，粉丝数>2300}\\
+\cvtag{擅于借助AI工具解决工作和生活中的问题}\\
+%\cvtag{在处理复杂或重复的任务时仍然具有耐心}\\
+\cvtag{Python}
+\cvtag{Pytorch}
+\cvtag{MATLAB}
+\cvtag{C/C++}
+\\
+\cvtag{office 办公套件}
+%\cvtag{Excel}
+%\cvtag{PowerPoint}
+\cvtag{ISP Pipline}
+\cvtag{个人博客}
+
+
+%\cvskill{German}{3.5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+\cvsection{兴趣爱好}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+
+\centerline
+{\wheelchart{1.2cm}{0.0cm}{%
+  4/10em/accent!70/{摄影},
+  3/10em/accent!60/{阅读},
+  2.5/10em/accent!50/{无人机},
+  1.5/10em/accent!40/{运动}
+}}
+\smallskip
+%{\fontsize{10}{11} \selectfont \textbf{热爱摄像和摄影，对画质有较高的追求，\\有志于长期从事和影像/画质有关的方向}}
+%{\fontsize{10}{11} \selectfont \textbf{乐于接受新事物，保持好奇和乐观的心态\\}}
+{\fontsize{10}{11} \selectfont \textbf{$~$有志于长期从事和图像/视觉有关的方向\\}}
+%{\fontsize{10}{11} \selectfont \textbf{$~~$乐于接受新事物，兴趣广泛，乐观积极\\}}
+
+\end{paracol}
+\end{document}
+
